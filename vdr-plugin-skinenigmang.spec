@@ -14,6 +14,7 @@ URL:		http://andreas.vdr-developer.org/
 Source:		http://andreas.vdr-developer.org/enigmang/download/vdr-%plugin-%version.tgz
 # TODO: packages lowcolor icons too, maybe use alternatives?
 Source1:	http://andreas.vdr-developer.org/enigmang/download/skinenigmang-logos-xpm-hi-20070702.tgz
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	vdr-devel >= 1.4.1-6
 BuildRequires:	libMagick-devel
 BuildRequires:	freetype2-devel
