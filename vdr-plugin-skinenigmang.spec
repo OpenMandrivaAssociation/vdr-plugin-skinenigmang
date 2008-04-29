@@ -51,7 +51,7 @@ cat > README.install.urpmi <<EOF
 EOF
 
 %build
-VDR_PLUGIN_FLAGS="%vdr_plugin_flags $(pkg-config --cflags Magick++)"
+VDR_PLUGIN_FLAGS="%vdr_plugin_flags $(pkg-config --cflags ImageMagick++)"
 %vdr_plugin_build \
 	SKINENIGMA_USE_PLUGIN_EPGSEARCH=1 \
 	SKINENIGMA_USE_PLUGIN_AVARDS=1 \
