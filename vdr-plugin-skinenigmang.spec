@@ -16,7 +16,7 @@ Source:		http://andreas.vdr-developer.org/enigmang/download/vdr-%plugin-%version
 Source1:	http://andreas.vdr-developer.org/enigmang/download/skinenigmang-logos-xpm-hi-20070702.tgz
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	vdr-devel >= 1.6.0
-BuildRequires:	libMagick-devel
+BuildRequires:	imagemagick-devel
 BuildRequires:	freetype2-devel
 Requires:	vdr-abi = %vdr_abi
 
