@@ -2,7 +2,7 @@
 %define plugin	skinenigmang
 %define name	vdr-plugin-%plugin
 %define version	0.0.6
-%define rel	3
+%define rel	4
 
 Summary:	VDR plugin: EnigmaNG skin
 Name:		%name
