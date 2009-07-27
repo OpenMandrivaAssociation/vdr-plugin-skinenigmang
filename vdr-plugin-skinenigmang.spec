@@ -15,7 +15,7 @@ Source:		http://andreas.vdr-developer.org/enigmang/download/vdr-%plugin-%version
 # TODO: packages lowcolor icons too, maybe use alternatives?
 Source1:	http://andreas.vdr-developer.org/enigmang/download/skinenigmang-logos-xpm-hi-20070702.tgz
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildRequires:	vdr-devel >= 1.6.0
+BuildRequires:	vdr-devel >= 1.6.0-7
 BuildRequires:	imagemagick-devel
 BuildRequires:	freetype2-devel
 Requires:	vdr-abi = %vdr_abi
@@ -51,7 +51,7 @@ cat > README.install.urpmi <<EOF
 EOF
 
 %build
-VDR_PLUGIN_FLAGS="%vdr_plugin_flags $(pkg-config --cflags ImageMagick++)"
+VDR_PLUGIN_EXTRA_FLAGS="$(pkg-config --cflags ImageMagick++)"
 %vdr_plugin_build \
 	SKINENIGMA_USE_PLUGIN_EPGSEARCH=1 \
 	SKINENIGMA_USE_PLUGIN_AVARDS=1 \
