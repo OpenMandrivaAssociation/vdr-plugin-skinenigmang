@@ -87,3 +87,71 @@ rm -rf %{buildroot}
 %{_vdr_plugin_datadir}/%{plugin}
 %{_vdr_plugin_cfgdir}/%{plugin}
 %{_vdr_themedir}/*.theme
+
+
+%changelog
+* Thu Jul 15 2010 Funda Wang <fwang@mandriva.org> 0.1.0-3mdv2011.0
++ Revision: 553585
+- rebuild
+
+* Tue Jul 28 2009 Anssi Hannula <anssi@mandriva.org> 0.1.0-2mdv2010.0
++ Revision: 401088
+- rebuild for new VDR
+- adapt for vdr compilation flags handling changes, bump buildrequires
+
+* Tue Jul 14 2009 Anssi Hannula <anssi@mandriva.org> 0.1.0-1mdv2010.0
++ Revision: 395754
+- new version
+
+* Fri Mar 20 2009 Anssi Hannula <anssi@mandriva.org> 0.0.6-5mdv2009.1
++ Revision: 359364
+- rebuild for new vdr
+
+* Thu Jan 29 2009 Götz Waschk <waschk@mandriva.org> 0.0.6-4mdv2009.1
++ Revision: 335087
+- rebuild for new libmagick
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - lowercase ImageMagick
+
+* Sun Oct 12 2008 Anssi Hannula <anssi@mandriva.org> 0.0.6-3mdv2009.1
++ Revision: 292795
+- rebuild for new imagemagick (libmagick major was not changed despite
+  breaking ABI)
+- use backward-compatible pkg-config call for libmagick
+
+* Mon Apr 28 2008 Anssi Hannula <anssi@mandriva.org> 0.0.6-2mdv2009.0
++ Revision: 197976
+- rebuild for new vdr
+
+* Sat Apr 26 2008 Anssi Hannula <anssi@mandriva.org> 0.0.6-1mdv2009.0
++ Revision: 197721
+- new version
+- add vdr_plugin_prep
+- bump buildrequires on vdr-devel
+- update URL
+- build with support for extra features with other plugins
+- fix build with recent libmagick
+
+* Fri Jan 04 2008 Anssi Hannula <anssi@mandriva.org> 0.0.5-4mdv2008.1
++ Revision: 145200
+- rebuild for new vdr
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Mon Oct 29 2007 Anssi Hannula <anssi@mandriva.org> 0.0.5-3mdv2008.1
++ Revision: 103210
+- rebuild for new vdr
+
+* Sun Jul 08 2007 Anssi Hannula <anssi@mandriva.org> 0.0.5-2mdv2008.0
++ Revision: 50044
+- rebuild for new vdr
+
+* Sun Jul 08 2007 Anssi Hannula <anssi@mandriva.org> 0.0.5-1mdv2008.0
++ Revision: 49915
+- initial Mandriva release
+
