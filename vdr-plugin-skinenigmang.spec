@@ -2,7 +2,7 @@
 %define plugin	skinenigmang
 %define name	vdr-plugin-%plugin
 %define version	0.1.0
-%define rel	3
+%define rel	4
 
 Summary:	VDR plugin: EnigmaNG skin
 Name:		%name
@@ -14,7 +14,6 @@ URL:		http://andreas.vdr-developer.org/enigmang/
 Source:		http://andreas.vdr-developer.org/enigmang/download/vdr-%plugin-%version.tgz
 # TODO: packages lowcolor icons too, maybe use alternatives?
 Source1:	http://andreas.vdr-developer.org/enigmang/download/skinenigmang-logos-xpm-hi-20070702.tgz
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	vdr-devel >= 1.6.0-7
 BuildRequires:	imagemagick-devel
 BuildRequires:	freetype2-devel
@@ -60,7 +59,6 @@ VDR_PLUGIN_EXTRA_FLAGS="$(pkg-config --cflags ImageMagick++)"
 	HAVE_FREETYPE=1
 
 %install
-rm -rf %{buildroot}
 %vdr_plugin_install
 
 install -d -m755 %{buildroot}%{_vdr_themedir}
@@ -71,15 +69,6 @@ cp -a %{plugin} %{buildroot}%{_vdr_plugin_datadir}
 
 install -d -m755 %{buildroot}%{_vdr_plugin_cfgdir}
 ln -s %{_vdr_plugin_datadir}/%{plugin} %{buildroot}%{_vdr_plugin_cfgdir}/%{plugin}
-
-%clean
-rm -rf %{buildroot}
-
-%post
-%vdr_plugin_post %plugin
-
-%postun
-%vdr_plugin_postun %plugin
 
 %files -f %plugin.vdr
 %defattr(-,root,root)
