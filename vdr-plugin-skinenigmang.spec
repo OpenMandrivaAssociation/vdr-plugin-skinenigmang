@@ -6,7 +6,7 @@ Version:	0.1.2
 Release:	1
 Group:		Video
 License:	GPL+
-URL:		http://andreas.vdr-developer.org/enigmang/
+URL:		https://andreas.vdr-developer.org/enigmang/
 Source:		http://andreas.vdr-developer.org/enigmang/download/vdr-%plugin-%{version}.tgz
 Source1:	http://andreas.vdr-developer.org/enigmang/download/skinenigmang-logos-xpm-hi-20070702.tgz
 BuildRequires:	vdr-devel >= 1.6.0-7
